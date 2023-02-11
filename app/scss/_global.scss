@@ -1,0 +1,106 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #fff;
+	color: #262f32;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container {
+	max-width: 1396px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.title-light {
+	font-weight: 300;
+	display: block;
+}
+
+.title-bold {
+	font-weight: 700;
+	display: block;
+}
+
+.title-black {
+	font-weight: 900;
+}
+
+.title {
+	font-size: 45px;
+	font-weight: 300;
+
+	@include mq("tablet") {
+		font-size: 36px;
+	}
+
+}
+
+.section {
+	padding: 65px 20px 70px 55px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include mq("tablet-2") {
+		padding-left: 25px;
+	}
+}
+
+.links {
+	padding: 14px 40px 15px;
+	border-radius: 11px;
+	border: 1px solid #fff;
+	color: #fff;
+	background-color: transparent;
+	display: inline-block;
+	letter-spacing: 0.9px;
+	outline: 0;
+	transition: transform 0.5s ease-in-out;
+
+	&:hover {
+		transform: scale(105%);
+	}
+}
+
+.main {
+	flex: 1 0 auto;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		@include mq("tablet") {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+.footer {
+	flex: 0 0 auto;
+}

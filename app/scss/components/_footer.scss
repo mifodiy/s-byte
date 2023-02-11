@@ -1,0 +1,11 @@
+.footer {
+  
+  &__inner {
+    display: flex;
+
+    @include mq("tablet-2") {
+      flex-direction: column;
+    }
+  }
+
+}
